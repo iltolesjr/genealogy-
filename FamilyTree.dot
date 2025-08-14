@@ -1,0 +1,36 @@
+digraph FamilyTree {
+  // Direct ancestor/descendant relationships for Ira Latrell Toles
+  "Ira Latrell Toles" [shape=box];
+  "Gloria J Johnson" [shape=ellipse];
+  "ira Toles" [shape=ellipse];
+  "Betty D Toles" [shape=ellipse];
+  "Elvin Oscar Bess" [shape=ellipse];
+  "Velma Bess" [shape=ellipse];
+  "Robert Smith" [shape=ellipse];
+  "Georgia M Smith" [shape=ellipse];
+  "Francis Smith" [shape=ellipse];
+  "Myrtes Smith" [shape=ellipse];
+  "Sadie Mae (Smith) Caston Alexander" [shape=ellipse];
+  "Roy Jesse Smith" [shape=ellipse];
+  "Jessie Smith" [shape=ellipse];
+  "Willie Smith" [shape=ellipse];
+  "James Hollywood" [shape=ellipse];
+  "Manuel Smith" [shape=ellipse];
+  "Albetta Smith" [shape=ellipse];
+
+  // Example connections (parent-child, spouse)
+  "Ira Latrell Toles" -> "Gloria J Johnson" [label="mother"];
+  "Ira Latrell Toles" -> "ira Toles" [label="father"];
+  "Betty D Toles" -> "ira Toles" [label="spouse"];
+  "Elvin Oscar Bess" -> "Velma Bess" [label="spouse"];
+  "Robert Smith" -> "Georgia M Smith" [label="child"];
+  "Robert Smith" -> "Francis Smith" [label="child"];
+  "Robert Smith" -> "Myrtes Smith" [label="child"];
+  "Robert Smith" -> "Sadie Mae (Smith) Caston Alexander" [label="child"];
+  "Robert Smith" -> "Roy Jesse Smith" [label="child"];
+  "Robert Smith" -> "Jessie Smith" [label="child"];
+  "Robert Smith" -> "Willie Smith" [label="child"];
+  "Robert Smith" -> "James Hollywood" [label="child"];
+  "Robert Smith" -> "Manuel Smith" [label="child"];
+  "Robert Smith" -> "Albetta Smith" [label="child"];
+}
