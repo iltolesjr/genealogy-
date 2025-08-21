@@ -1,0 +1,6 @@
+match_id,match_name,shared_cm,key_surnames,key_locations,cluster_id,probable_mrca,confidence,tree_link,notes
+M001,John Smith,75.5,"Smith,Johnson,Brown","Missouri,Arkansas",smith_cluster,Unknown Smith ancestor,medium,https://example.com/tree1,Strong Missouri connection
+M002,Mary Jones,68.2,"Jones,Wilson,Davis","Illinois,Indiana",jones_cluster,Unknown Jones ancestor,high,https://example.com/tree2,Multiple overlapping surnames
+M003,Robert Toles,55.8,"Toles,Walker,Miller","Missouri,Tennessee",toles_cluster,Lum Sellers line,high,https://example.com/tree3,Direct Toles surname match
+M004,Sarah Williams,42.1,"Williams,Taylor,Brown","Arkansas,Louisiana",uncategorized,Unknown,low,,Distant match - needs more research
+M005,David Walker,38.7,"Walker,Sellers,Thompson","Missouri,Kentucky",walker_sellers,Sellers connection,medium,https://example.com/tree5,Potential Sellers link through Walker line

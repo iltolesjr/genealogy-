@@ -1,0 +1,6 @@
+person_id,name,birth_year,death_year,relation,birth_place,death_place,citations,notes
+LUM001,Lum Sellers,1875,1945,3rd great-grandfather,"Arkansas","Missouri","C001,C002","Primary MRCA candidate for Sellers line"
+ANNIE001,Annie M. Sellers,1900,1975,2nd great-grandmother,"Missouri","Missouri","C003,C004","Daughter of Lum Sellers - connects to D.B. line"
+H001,Unknown Seller descendant A,1920,1990,great-grandparent,"Missouri","Missouri","C005","Hypothetical link between Annie and Wilma"
+WLT001,Wilma Lee Toles,1940,2010,grandmother,"Missouri","Missouri","C006,C007","Focus person - needs parents confirmed"
+UFT001,Unknown Toles male,1915,1980,great-grandfather,"Missouri","Missouri","","Hypothetical father of Wilma - surname source"

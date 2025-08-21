@@ -1,0 +1,19 @@
+// Genealogy DNA Workflow ERD
+digraph {
+	rankdir=TB size="12,8"
+	node [fillcolor=lightblue shape=box style="rounded,filled"]
+	edge [color=darkblue fontsize=10]
+	M [label="paternal_matches_template.csv
+(match_id, match_name, shared_cm, key_surnames, key_locations, cluster_id, ...)" fillcolor=lightgreen]
+	H [label="lum_sellers_hypothesis.csv
+(person_id, name, birth_year, relation, citations, ...)" fillcolor=lightyellow]
+	C [label="citations.csv
+(citation_id, type, title, year, place, detail, url, ...)" fillcolor=lightcoral]
+	M -> H [label="possible MRCA link
+(match → hypothesis person)" color=green]
+	H -> C [label="source
+(hypothesis node → citation)" color=red]
+	CL [label="cluster_id
+(manual or auto-assigned)" fillcolor=lightgray]
+	CL -> M [label="has many matches" color=gray]
+}

@@ -1,0 +1,8 @@
+citation_id,type,title,year,place,detail,url,person_id,notes
+C001,Census,"1920 United States Federal Census",1920,"Arkansas","Lum Sellers household","https://ancestry.com/census1920/lum-sellers","LUM001","Shows Lum with wife Julia and children"
+C002,Death Certificate,"Missouri Death Certificate",1945,"Missouri","Lum Sellers death record","https://sos.mo.gov/records/death","LUM001","Confirms birth year and parents"
+C003,Birth Record,"Missouri Birth Index",1900,"Missouri","Annie M. Sellers birth","https://sos.mo.gov/records/birth","ANNIE001","Shows parents as Lum and Julia Sellers"
+C004,Marriage Record,"Missouri Marriage Records",1920,"Missouri","Annie M. Sellers marriage","https://sos.mo.gov/records/marriage","ANNIE001","Marriage to unknown spouse"
+C005,Directory,"City Directory",1940,"Missouri","Seller family listing","https://newspapers.com/directory","H001","Evidence of Seller family in area"
+C006,Birth Record,"Missouri Birth Index",1940,"Missouri","Wilma Lee Toles birth","https://sos.mo.gov/records/birth","WLT001","Birth record - parents to be confirmed"
+C007,Obituary,"Newspaper Obituary",2010,"Missouri","Wilma Lee Toles obituary","https://newspapers.com/obituary","WLT001","Lists survivors and family connections"
