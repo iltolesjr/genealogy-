@@ -1,6 +1,6 @@
 ## Paternal DNA Matches Leads Table
 
-| Name                          | Shared cM | 🟥 Grandparents | 🟧 Great Grandparents | 🟨 2nd Great Grandparents | 🟩 3rd Great Grandparents | � 4th Great Grandparents | � 5th Great Grandparents |
+| Name                          | Shared cM | 🟥 Grandparents | 🟧 Great Grandparents | 🟨 2nd Great Grandparents | 🟩 3rd Great Grandparents | 🟦 4th Great Grandparents | 🟪 5th Great Grandparents |
 |-------------------------------|-----------|----------------|----------------------|-------------------------|-------------------------|-------------------------|-------------------------|
 | Azaria Covington              | 44 cM     |              |                    |                       |        🟩             |                       |                       |
 | V.W. (Managed by Dameon Brown)| 44 cM     |              |                    |                       |        🟩             |                       |                       |
