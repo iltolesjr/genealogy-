@@ -1,0 +1,70 @@
+{
+    "theme": "Darcula",
+    "font": {
+        "name": "JetBrains Mono",
+        "size": 14,
+        "ligatures": true
+    },
+    "editor": {
+        "soft_wraps": true,
+        "show_whitespace": true,
+        "code_formatter": "Black",
+        "line_length": 88
+    },
+    "plugins": [
+        "Python",
+        "Markdown",
+        "YAML",
+        "Git",
+        "Docker",
+        "Jupyter",
+        "Docstring Generator"
+    ],
+    "interpreter": "C:\\Program Files\\Python313\\python.exe",
+    "path_variables": [
+        "C:\\Users\\Administrator\\AppData",
+        "C:\\Program Files (x86)\\VMware\\VMware Workstation\\bin\\",
+        "C:\\Program Files\\Python313\\Scripts\\",
+        "C:\\Program Files\\Python313\\",
+        "%SystemRoot%\\system32",
+        "%SystemRoot%",
+        "%SystemRoot%\\System32\\Wbem",
+        "%SYSTEMROOT%\\System32\\WindowsPowerShell\\v1.0\\",
+        "%SYSTEMROOT%\\System32\\OpenSSH\\",
+        "C:\\Program Files\\Git\\cmd",
+        "C:\\Program Files\\nodejs\\",
+        "C:\\Program Files\\AzureConnectedMachineAgent\\",
+        "C:\\WINDOWS\\System32",
+        "C:\\Program Files\\Docker\\Docker\\resources\\bin",
+        "C:\\Program Files\\Go\\bin"
+    ],
+    "shortcuts": {
+        "Run MCP Agent": "Ctrl+Alt+Shift+M",
+        "Open Terminal": "Ctrl+Alt+T",
+        "Format Code": "Ctrl+Alt+F",
+        "Search Actions": "Ctrl+Shift+A",
+        "Open Recent Files": "Ctrl+E"
+    },
+    "focus_areas": [
+        "Linux Server Administration",
+        "English Composition",
+        "Financial Literacy",
+        "Law",
+        "Genealogy",
+        "Data Engineering"
+    ],
+    "mcp_agent": {
+        "entry_points": [
+            "examples/basic/mcp_basic_agent/main.py",
+            "examples/mcp_agent_server/asyncio/basic_agent_server.py"
+        ],
+        "tool_config": {
+            "env_support": true,
+            "yaml_support": true,
+            "structured_generation": true,
+            "memory_features": true
+        },
+        "multi_repo_support": true
+    },
+    "last_updated": "2025-09-08"
+}
