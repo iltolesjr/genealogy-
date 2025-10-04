@@ -19,6 +19,7 @@ This repository contains genealogy research for the Ira Toles family tree, inclu
 ### Research Files
 - **gedcom-text.ipynb** - GEDCOM data parsing and analysis
 - **LULA_GREEN_RESEARCH.md** - Research findings on Lula/Lulu Green question
+- **SEARCH_GUIDE.md** - Guide for searching genealogy records in this repository
 
 ## Recent Research Questions
 
@@ -65,6 +66,14 @@ This repository includes Jupyter notebooks for:
 - Hypothesis testing (e.g., Lum Sellers connection)
 - Geographic location analysis
 - Surname pattern matching
+
+## How to Search
+
+Need to find someone in the tree? See **[SEARCH_GUIDE.md](SEARCH_GUIDE.md)** for:
+- Search commands by name, surname, location, or date
+- Common search examples
+- Tips for verifying information
+- Guide to file formats
 
 ---
 
