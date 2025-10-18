@@ -1,0 +1,45 @@
+{
+  "gedmatch_ref": "9394682",
+  "display": "GEDmatch Individual Detail Display from GEDCOM",
+  "name": "Willard Duke DALLAS, Rev.",
+  "born": "07 Jul 1930, Idabel, McCurtain, Oklahoma, USA",
+  "died": "15 Feb 2017, Edmond, Oklahoma, Oklahoma, USA",
+  "father": {
+    "name": "Marcel V. Dallas",
+    "born": "28 February 1912",
+    "died": "8 August 1973"
+  },
+  "mother": {
+    "name": "Lucille Wyrick",
+    "born": "2 FEB 1917",
+    "died": "MAY 1984"
+  },
+  "unions": [
+    {
+      "spouse": "HIDDEN HIDDEN",
+      "spouse_kit": "A002514",
+      "children": [
+        {"name":"HIDDEN HIDDEN","kit":"A892296"},
+        {"name":"HIDDEN HIDDEN","kit":"T623429"},
+        {"name":"HIDDEN HIDDEN","kit":"T737488"}
+      ]
+    },
+    {
+      "spouse": "HIDDEN HIDDEN",
+      "children": [
+        {"name":"HIDDEN HIDDEN"},
+        {"name":"Sonja Lorraine Davis","born":"20 Jan 1958","died":"08 Oct 1996"}
+      ]
+    },
+    {
+      "spouse": "HIDDEN HIDDEN",
+      "children": [ {"name":"HIDDEN HIDDEN"} ]
+    },
+    {
+      "spouse": "HIDDEN HIDDEN",
+      "children": [ {"name":"HIDDEN HIDDEN"}, {"name":"HIDDEN HIDDEN"} ]
+    }
+  ],
+  "linked_kits": ["A434590"],
+  "notes": "Source: pasted GEDmatch Individual Detail. Some names are hidden/masked in the display."
+}

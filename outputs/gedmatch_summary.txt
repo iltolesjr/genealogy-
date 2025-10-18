@@ -1,0 +1,17 @@
+Parsed 19 segments
+Total cM: 2242.5
+Mean cM: 118.03
+Median cM: 44.90
+Max cM: 281.50
+
+Top 10 kits by segment count:
+1: 7
+Speed: 2
+GU1800109: 1
+L: 1
+A082033: 1
+A292160: 1
+Jones: 1
+DL8010615: 1
+Kelley: 1
+FX5788577: 1
