@@ -1,0 +1,2 @@
+kit,node_name,node_date,found,file_searched,notes
+A044456,, ,False,C:\Users\irato\Downloads\apextree-1760920229147.svg,"Searched entire SVG file; no exact occurrence of 'A044456' found. The SVG uses node IDs like P1, P4 and human-readable node names (e.g., 'Sylvester S Kennon', 'Ernestine Wright', 'W T Williams'). If A044456 is an internal kit label not present in this SVG, try a different apextree SVG or the GEDCOM/tree source that produced the SVG."

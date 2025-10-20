@@ -1,0 +1,7 @@
+kit,display,email,chr,start,end,cM,source,notes
+A436601,,genewilliams333@gmail.com,,17057138,30047732,36.6,triang_117615066.csv,"Repeated overlap with Wilma at 17,057,138–30,047,732 (36.6 cM). Candidate: Gene Williams (saved pedigree in outputs/gene_williams_pedigree.md)."
+AK6981890,,vruben@gmail.com,5,127803816,157191954,28.4,scripts/csvsegmatch_.csv,"AK6981890 ↔ GU1800109 (Ira L Toles) large overlap on chr5 (28.4 cM) — many AK6981890 rows link to GU1800109 in scripts/csvsegmatch_.csv. See also chr8/12/15/20 overlaps in same file. '*zerica' token appears in AK6981890 rows (possible Erica clue)."
+AK6981890,,vruben@gmail.com,8,102516385,125968156,22.1,scripts/csvsegmatch_.csv,"AK6981890 ↔ GU1800109 (chr8 22.1 cM). '*zerica' appears on this chr in the aggregated CSV."
+AK6981890,,vruben@gmail.com,12,17564072,59286610,37.9,scripts/csvsegmatch_.csv,"AK6981890 ↔ GU1800109 (chr12 37.9 cM) — very large overlap."
+AK6981890,,vruben@gmail.com,20,15631758,46268493,31.7,scripts/csvsegmatch_.csv,"AK6981890 ↔ GU1800109 (chr20 31.7 cM). Multiple chromosomes show AK6981890 connects to GU1800109 across large segments."
+A874604,,jovanbrown3@gmail.com,6,88620665,101967710,12.4,triang_1710113373.csv,"Jovan Fonville (listed 64 cM in maternal_matches.md). Triangulation row shows overlap on chr6 (88,620,665–101,967,710) ~12.4 cM with Wilma's triangulation groups (TG6_x)."

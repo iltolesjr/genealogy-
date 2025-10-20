@@ -1,0 +1,5 @@
+kit,source,row
+GU1800109,wilma_candidate_overlaps,AK6981890||vruben@gmail.com|5|127803816|157191954|28.4|scripts/csvsegmatch_.csv|AK6981890 ↔ GU1800109 (Ira L Toles) large overlap on chr5 (28.4 cM) — many AK6981890 rows link to GU1800109 in scripts/csvsegmatch_.csv. See also chr8/12/15/20 overlaps in same file. '*zerica' token appears in AK6981890 rows (possible Erica clue).
+GU1800109,wilma_candidate_overlaps,AK6981890||vruben@gmail.com|8|102516385|125968156|22.1|scripts/csvsegmatch_.csv|AK6981890 ↔ GU1800109 (chr8 22.1 cM). '*zerica' appears on this chr in the aggregated CSV.
+GU1800109,wilma_candidate_overlaps,AK6981890||vruben@gmail.com|12|17564072|59286610|37.9|scripts/csvsegmatch_.csv|AK6981890 ↔ GU1800109 (chr12 37.9 cM) — very large overlap.
+GU1800109,wilma_candidate_overlaps,AK6981890||vruben@gmail.com|20|15631758|46268493|31.7|scripts/csvsegmatch_.csv|AK6981890 ↔ GU1800109 (chr20 31.7 cM). Multiple chromosomes show AK6981890 connects to GU1800109 across large segments.

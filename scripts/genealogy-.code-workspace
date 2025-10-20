@@ -11,7 +11,12 @@
 		},
 		{
 			"path": "../../../../../Downloads"
+		},
+		{
+			"path": "../../../../../Downloads/AutoSegment_GU1800109_2025.10.20.02.51.49_min_10_max_500_segment_10"
 		}
 	],
-	"settings": {}
+	"settings": {
+		"r.lsp.promptToInstall": false
+	}
 }
