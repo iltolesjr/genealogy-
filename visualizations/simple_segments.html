@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Simple DNA Segment Plot</title>
+  <style>
+    body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; margin: 24px; }
+    .controls { display: flex; gap: 12px; align-items: center; flex-wrap: wrap; margin-bottom: 16px; }
+    .hint { color: #555; font-size: 0.9rem; }
+    .legend { display: flex; flex-wrap: wrap; gap: 10px; margin: 10px 0 6px; }
+    .legend-item { display: inline-flex; align-items: center; gap: 6px; padding: 2px 6px; border-radius: 6px; background: #f4f4f4; }
+    .swatch { width: 14px; height: 14px; border-radius: 3px; border: 1px solid #0002; }
+    .container { max-width: 1200px; }
+    .footer { margin-top: 20px; font-size: 0.9rem; color: #555; }
+    textarea { width: 100%; height: 140px; font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace; }
+  </style>
+  <script src="https://cdn.jsdelivr.net/npm/ideogram@1.15.0/dist/js/ideogram.min.js"></script>
+</head>
+<body>
+  <h1>Simple DNA Segment Plot</h1>
+  <p class="hint">Paste your segments below or keep the sample. Each item should have: chr (1-22), start, stop, and optional label and color. Example shown uses a few sample rows.</p>
+
+  <div class="controls">
+    <button id="plotBtn">Plot segments</button>
+    <label>
+      Orientation:
+      <select id="orientation">
+        <option value="horizontal" selected>horizontal</option>
+        <option value="vertical">vertical</option>
+      </select>
+    </label>
+  </div>
+
+  <div class="container">
+    <div id="legend" class="legend"></div>
+    <div id="ideogram"></div>
+  </div>
+
+  <h3>Segments JSON</h3>
+  <textarea id="segmentsInput">[
+  {"chr": 1,  "start": 20158241, "stop": 35093593, "label": "Miri Fields",        "color": "#d3d3d3"},
+  {"chr": 1,  "start": 20793015, "stop": 37534255, "label": "Kirstin Nelson",     "color": "#d3d3d3"},
+  {"chr": 1,  "start": 18527213, "stop": 37548473, "label": "*Emily Peete",      "color": "#d3d3d3"},
+  {"chr": 3,  "start": 176691296, "stop": 190791994, "label": "*efoxhill_aol_com","color": "#d2b48c"},
+  {"chr": 8,  "start": 76226176, "stop": 123574070, "label": "Jerry Slaughter",  "color": "#f08080"},
+  {"chr": 11, "start": 45706453,  "stop": 93767360,  "label": "Cluster 8",       "color": "#cd5c5c"}
+]</textarea>
+
+  <div class="footer">
+    Tips:
+    <ul>
+      <li>Colors are optional; omit <code>color</code> to auto-assign by label.</li>
+      <li>To group by person, keep label consistent; each unique label gets a color in the legend.</li>
+      <li>Coordinates should be base-pair positions on GRCh37/38 to match your source; Ideogram supports either.</li>
+    </ul>
+  </div>
+
+  <script>
+    // Simple categorical palette
+    const palette = [
+      "#1f77b4", "#ff7f0e", "#2ca02c", "#d62728", "#9467bd", "#8c564b",
+      "#e377c2", "#7f7f7f", "#bcbd22", "#17becf", "#40e0d0", "#00bfff",
+      "#adff2f", "#ff1493", "#ffa500", "#00ced1", "#9370db", "#00fa9a"
+    ];
+
+    function colorByLabelFactory() {
+      const map = new Map();
+      let i = 0;
+      return (label) => {
+        if (!label) return "#666";
+        if (!map.has(label)) map.set(label, palette[i++ % palette.length]);
+        return map.get(label);
+      };
+    }
+
+    function buildLegend(uniqueLabels) {
+      const legend = document.getElementById("legend");
+      legend.innerHTML = "";
+      const getColor = colorByLabelFactory();
+      uniqueLabels.forEach(label => {
+        const color = getColor(label);
+        const item = document.createElement("span");
+        item.className = "legend-item";
+        item.innerHTML = `<span class="swatch" style="background:${color}"></span> ${label}`;
+        legend.appendChild(item);
+      });
+      // Return the same factory so annotation colors match legend colors
+      return getColor;
+    }
+
+    function parseSegments(jsonText) {
+      try {
+        const data = JSON.parse(jsonText);
+        if (!Array.isArray(data)) throw new Error("Root must be an array");
+        return data.map((d, idx) => ({
+          chr: String(d.chr ?? d.chromosome ?? ""),
+          start: Number(d.start ?? d.begin ?? d.pos ?? 0),
+          stop: Number(d.stop ?? d.end ?? 0),
+          label: String(d.label ?? d.name ?? d.person ?? `seg_${idx+1}`),
+          color: d.color || null,
+        })).filter(d => d.chr && d.start && d.stop && d.start < d.stop);
+      } catch (e) {
+        alert("Invalid JSON: " + e.message);
+        return [];
+      }
+    }
+
+    function plot() {
+      const orientation = document.getElementById("orientation").value;
+      const raw = document.getElementById("segmentsInput").value;
+      const segs = parseSegments(raw);
+      const uniqueLabels = [...new Set(segs.map(s => s.label).filter(Boolean))];
+      const colorGetter = buildLegend(uniqueLabels);
+
+      const annotations = segs.map(s => ({
+        chr: String(s.chr),
+        start: s.start,
+        stop: s.stop,
+        name: s.label,
+        color: s.color || colorGetter(s.label)
+      }));
+
+      // Clear old ideogram if present
+      document.getElementById("ideogram").innerHTML = "";
+
+      // Draw ideogram
+      /* global Ideogram */
+      new Ideogram({
+        container: "#ideogram",
+        organism: "human",
+        chrHeight: orientation === "horizontal" ? 900 : 400,
+        chrMargin: 2,
+        annotationsLayout: "overlay",
+        orientation,
+        annotations
+      });
+    }
+
+    document.getElementById("plotBtn").addEventListener("click", plot);
+    // Auto-plot on load with the sample data
+    window.addEventListener("load", plot);
+  </script>
+</body>
+</html>
