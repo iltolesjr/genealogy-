@@ -203,6 +203,16 @@ def group_segments_by_chromosome(segments):
     return chr_groups
 
 
+def safe_sort_chromosome(chr_val):
+    """Safely sort chromosome values, handling non-numeric cases"""
+    try:
+        if chr_val and chr_val.isdigit():
+            return int(chr_val)
+    except (ValueError, AttributeError):
+        pass
+    return 99  # Put non-numeric chromosomes at the end
+
+
 def generate_markdown_report(triangulated_segs, wato_stats, cluster_info, one_to_one_segs, icw_sources, icw_matches):
     """Generate comprehensive markdown report"""
     
@@ -260,7 +270,19 @@ def generate_markdown_report(triangulated_segs, wato_stats, cluster_info, one_to
         report.append("| Segment Range | cM | Occurrences | Sources |")
         report.append("|---------------|-----|-------------|---------|")
         
-        for (start, end, cm), data in sorted(unique_segments.items(), key=lambda x: float(x[0][2]) if x[0][2] else 0, reverse=True):
+        # Filter and sort segments
+        def safe_float(val, default=0.0):
+            try:
+                return float(val) if val else default
+            except (ValueError, TypeError):
+                return default
+        
+        for (start, end, cm), data in sorted(unique_segments.items(), 
+                                             key=lambda x: safe_float(x[0][2]), 
+                                             reverse=True):
+            # Skip segments with 0 cM as they are likely data quality issues
+            if safe_float(cm) <= 0:
+                continue
             sources_str = ', '.join(sorted(data['sources']))[:50] + '...' if len(', '.join(sorted(data['sources']))) > 50 else ', '.join(sorted(data['sources']))
             report.append(f"| {start} - {end} | {cm} | {data['count']} | {sources_str} |")
         
@@ -334,14 +356,20 @@ def generate_markdown_report(triangulated_segs, wato_stats, cluster_info, one_to
         report.append("| Chromosome | Start | End | cM | SNPs |")
         report.append("|------------|-------|-----|-----|------|")
         
-        for chr_num in sorted(chr_groups.keys(), key=lambda x: int(x) if x.isdigit() else 99):
+        for chr_num in sorted(chr_groups.keys(), key=safe_sort_chromosome):
             for seg in chr_groups[chr_num]:
                 report.append(f"| {seg['chr']} | {seg['start']} | {seg['end']} | {seg['cM']} | {seg.get('snps', 'N/A')} |")
         
         report.append("")
         
-        # Calculate totals
-        total_cm = sum(float(seg['cM']) for seg in one_to_one_segs if seg['cM'])
+        # Calculate totals with safe float conversion
+        def safe_float_conv(val):
+            try:
+                return float(val) if val else 0.0
+            except (ValueError, TypeError):
+                return 0.0
+        
+        total_cm = sum(safe_float_conv(seg.get('cM')) for seg in one_to_one_segs)
         report.append(f"**Total Direct Shared DNA:** {total_cm:.1f} cM across {len(one_to_one_segs)} segments")
         report.append("")
     else:

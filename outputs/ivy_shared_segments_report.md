@@ -1,6 +1,6 @@
 # DNA Segment Report: Ivy Lee (Kit AN9982138)
 
-*Generated: 2026-01-14 15:47:31*
+*Generated: 2026-01-14 15:50:01*
 
 ---
 
@@ -63,10 +63,6 @@ on the same chromosome segment. This strongly indicates the DNA comes from a com
 | 6107360 - 8227344 | 9.9 | 11 | triang_423444393.csv |
 | 7171561 - 9781249 | 9.9 | 11 | triang_423444393.csv |
 | 6026665 - 8123197 | 9.8 | 11 | triang_423444393.csv |
-| 12053552 - 22 | 0.0 | 44 | triang_1257462371.csv, triang_1710113373.csv, tria... |
-| 19486725 - 22 | 0.0 | 44 | triang_1257462371.csv, triang_1710113373.csv, tria... |
-| 9047881 - 13 | 0.0 | 12 | triang_1710113373.csv, triang_423444393.csv |
-| 9806921 - 10 | 0.0 | 6 | triang_423444393.csv |
 
 ## 4. In Common With (ICW) Matches
 
