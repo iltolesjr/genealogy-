@@ -1,9 +1,9 @@
 ## Maternal DNA Matches Leads Table
 
-| Name                                   | Shared cM | 🟥 Grandparents | 🟧 Great Grandparents | 🟨 2nd Great Grandparents | 🟩 3rd Great Grandparents | � 4th Great Grandparents | � 5th Great Grandparents |
+| Name                                   | Shared cM | 🟥 Grandparents | 🟧 Great Grandparents | 🟨 2nd Great Grandparents | 🟩 3rd Great Grandparents | 🟦 4th Great Grandparents | 🟪 5th Great Grandparents |
 |----------------------------------------|-----------|----------------|----------------------|-------------------------|-------------------------|-------------------------|-------------------------|
-| Hope Panages                           | 93 cM     |              |                    |         �             |                       |                       |
-| M.L. (Managed by History Class Blalock)| 86 cM     |              |                    |         �             |                       |                       |
+| Hope Panages                           | 93 cM     |              |                    |         🟨             |                       |                       |
+| M.L. (Managed by History Class Blalock)| 86 cM     |              |                    |         🟨             |                       |                       |
 | Alexa Johanningmeier                   | 80 cM     |              |                    |                       |                       |                       |
 | Dani r                                 | 76 cM     |              |                    |                       |                       |                       |
 | Darrie Clayton                         | 74 cM     |              |                    |                       |                       |                       |
@@ -12,7 +12,7 @@
 | M.L. (Managed by History Class Blalock)| 86 cM     |              |                    |         🟨             |                       |                       |                       |
 | Kevia Maloney                          | 62 cM     |              |                    |                       |                       |                       |
 | Danthony Alexander                     | 59 cM     |              |                    |                       |                       |                       |
-| Percy Watson Jr                        | 58 cM     |              |                    |         �             |                       |                       |
+| Percy Watson Jr                        | 58 cM     |              |                    |         🟨             |                       |                       |
 | Thereshia Smith                        | 58 cM     |              |                    |                       |                       |                       |
 | Kayla Withers                          | 58 cM     |              |                    |                       |                       |                       |
 | Derrick Rouse                          | 57 cM     |              |                    |                       |                       |                       |
@@ -28,7 +28,7 @@
 | Jason Hutchins                         | 48 cM     |              |                    |                       |                       |                       |
 | Fabian Eastman (Managed by Cynthia Christor) | 47 cM |              |                    |                       |                       |                       |
 | Kennyraykelly                          | 46 cM     |              |                    |                       |                       |                       |
-| jasmayne Diggs                         | 45 cM     |              |                    |         �             |                       |                       |
+| jasmayne Diggs                         | 45 cM     |              |                    |         🟨             |                       |                       |
 | Ebony Mayberry                         | 45 cM     |              |                    |                       |                       |                       |
 | Deldrick Wilson                        | 44 cM     |              |                    |                       |                       |                       |
 | Earlene Bibbs Hughes                   | 42 cM     |              |                    |                       |                       |                       |
