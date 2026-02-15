@@ -67,6 +67,23 @@ This repository includes Jupyter notebooks for:
 - Geographic location analysis
 - Surname pattern matching
 
+### DNA Segment Reports
+
+Generate comprehensive DNA segment reports for specific matches:
+
+**Ivy Lee Segment Report** (Kit AN9982138)
+```bash
+./report_ivy_segments.sh
+# or
+python3 scripts/generate_ivy_segment_report.py
+```
+
+This generates a detailed report at `outputs/ivy_shared_segments_report.md` including:
+- **Summary Statistics**: Direct shared cM, average segment size, triangulation ranking
+- **TRI (Triangulated Segments)**: Segments where you, Ivy, and others all match
+- **ICW (In Common With)**: People who match both you and Ivy
+- **Chromosome Breakdown**: Detailed segment information by chromosome
+
 ## How to Search
 
 Need to find someone in the tree? See **[SEARCH_GUIDE.md](SEARCH_GUIDE.md)** for:
