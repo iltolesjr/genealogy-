@@ -1,0 +1,44 @@
+Yes, using three trees that descend from the same person—even if they don't match yours yet—is the Gold Standard for breaking through "brick walls." This is called Reverse Genealogy.
+Since their trees don't match each other, they are likely stuck on different children of the same ancestor. Your goal is to find the convergent point.
+The "Convergence" Matrix
+Look at these specific spots on their trees to find where they eventually "meet."
+| Where to Look | What it Tells You | Why it Matters |
+|---|---|---|
+| The "End of Line" | The furthest ancestor they found. | If all three stop at the same surname/county, that's your target. |
+| Great-Grandparents | Their 2nd-3rd generation. | If you share 100cM+, your MRCA is likely their G-Grandparent. |
+| Siblings of Ancestors | The "Aunts and Uncles." | One tree might list a sister who married into your known family. |
+The "Triangulation" Workflow
+If Tree A, Tree B, and Tree C don't match:
+ * Ignore Surnames: Look for a shared location and year. (e.g., All three have ancestors in St. Paul, MN in 1890).
+ * Build "Floating Trees": Start a new, private tree. Put the "End of Line" person from all three matches into it.
+ * Research Upward: Use census records to see if those three "End of Line" people lived near each other or had parents with the same name.
+Python Tree Convergence Tool
+This script helps you identify the "Target Era" where these three trees should theoretically meet based on their highest cM.
+def find_convergence_target(cm_list, avg_birth_year=1960):
+    # Use the highest cM to find the closest possible connection
+    top_cm = max(cm_list)
+    
+    if top_cm > 400:
+        gen_back = 3 # Great-Grandparents
+    elif 100 < top_cm <= 400:
+        gen_back = 4 # 2x Great-Grandparents
+    else:
+        gen_back = 5 # 3x Great-Grandparents
+        
+    target_year = avg_birth_year - (gen_back * 30)
+    
+    return f"""
+    --- TARGET DATA ---
+    Highest Cluster Match: {top_cm} cM
+    Estimated Generations to MRCA: {gen_back}
+    Focus Search Year: Around {target_year}
+    Action: Look for a couple in this era that links all 3 trees.
+    """
+
+# Example: Your 3 matches are 250cM, 150cM, and 90cM
+print(find_convergence_target([250, 150, 90]))
+
+Where to look if they don't match each other:
+ * The Maiden Names: Often, one tree tracks the father’s line and the other tracks the mother’s. Look for the wives in their trees.
+ * The Census: Look at the 1880 or 1900 Federal Census for the "End of Line" ancestors. Are they living in the same ward or township?
+Would you like me to help you search for a specific location or surname group in the St. Paul area records from that era?
